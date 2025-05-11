@@ -1,0 +1,87 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="copyright">Kostiantyn Kobetskyi {currentYear}</div>
+    
+    <div class="social-links">
+      <a href="https://t.me/Artstar99" class="social-link" aria-label="Telegram">
+        <img class="telegram" src="public/icons/icon-telegram.svg" alt="Telegram" />
+      </a>
+      <a href="https://www.linkedin.com/in/kostiantyn-kobetskyi-11596b251/" class="social-link" aria-label="LinkedIn">
+        <img src="public/icons/icon-linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="mailto:k.kobetskoy@outlook.com" class="social-link" aria-label="Email">
+       <img src="public/icons/icon-email.svg" alt="Email" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--gray-700);
+    color: var(--white);
+    padding: 30px 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #36363D;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    color: var(--white);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  .telegram {
+    margin-right: 2px;
+    margin-top: 2px;
+  }
+
+  
+  
+  .social-link:hover {
+    opacity: 1;
+  }
+  
+  /* Media queries */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .copyright {
+      text-align: center;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+  }
+</style> 

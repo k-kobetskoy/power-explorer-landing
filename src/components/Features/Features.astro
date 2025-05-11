@@ -1,0 +1,208 @@
+---
+const features = [
+  {
+    title: "Parse & Validate Queries",
+    description: "Quickly spot and fix errors with real-time query parsing and inline validation.",
+    icon: "code-validation"
+  },
+  {
+    title: "Modern UI & UX",
+    description: "Built for clarity and speed with a clean interface that makes exploring easy and efficient.",
+    icon: "modern-ui"
+  },
+  {
+    title: "Search by Logical & Display Names",
+    description: "Find what you need faster — search results include both logical and display names.",
+    icon: "search"
+  },
+  {
+    title: "View Raw Dataverse Responses",
+    description: "Inspect full raw responses directly in the app for easier debugging and transparency.",
+    icon: "code-view"
+  },
+  {
+    title: "Toggle Result Naming",
+    description: "Easily switch between logical and display names in your result table view.",
+    icon: "toggle"
+  },
+  {
+    title: "More Features Coming Soon",
+    description: "Tabbed queries, advanced validation, sorting/search in results, light theme, and improved auth are all on the roadmap.",
+    icon: "upcoming"
+  }
+];
+---
+
+<section class="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="features-badge">FEATURES</div>
+      <h2>Modern tooling for Dataverse development</h2>
+      <p>Built from the ground up for clarity, speed, and precision.<br />PowerExplorer redefines what Dataverse exploration should feel like.</p>
+    </div>
+    
+    <div class="features-grid">
+      {features.map(feature => (
+        <div class="feature-card">
+          <div class="feature-icon">
+            <img src={`/icons/${feature.icon}.svg`} alt={feature.title} width="24" height="24" />
+          </div>
+          <h3>{feature.title}</h3>
+          <p>{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .container {
+    z-index: 4;
+    max-width: 1400px;
+  }
+
+  .features {
+    padding: 100px 0;
+    background-color: var(--white);
+    z-index: 4;
+  }
+  
+  .features-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  
+  .features-badge {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .features-header h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .features-header p {
+    font-size: 18px;
+    color: var(--gray-700);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .feature-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-icon {
+    background-color: #FFF0EC;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card:nth-child(2) .feature-icon,
+  .feature-card:nth-child(5) .feature-icon {
+    background-color: #FFF0EC;
+  }
+  
+  .feature-card:nth-child(1) .feature-icon,
+  .feature-card:nth-child(4) .feature-icon {
+    background-color: #FFF0EC;
+  }
+  
+  .feature-card:nth-child(3) .feature-icon,
+  .feature-card:nth-child(6) .feature-icon {
+    background-color: #FFF0EC;
+  }
+  
+  .feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    color: var(--gray-700);
+    line-height: 1.5;
+  }
+  
+  /* Media queries */
+  @media (max-width: 992px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features-header h2 {
+      font-size: 36px;
+    }
+    
+    .features-header p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .features-header {
+      margin-bottom: 50px;
+    }
+    
+    .features-header h2 {
+      font-size: 32px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .features-header h2 {
+      font-size: 28px;
+    }
+    
+    .feature-card {
+      padding: 20px;
+    }
+    
+    .feature-card h3 {
+      font-size: 18px;
+    }
+    
+    .feature-card p {
+      font-size: 14px;
+    }
+    
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style> 

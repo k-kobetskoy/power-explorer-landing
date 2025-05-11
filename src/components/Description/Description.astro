@@ -1,0 +1,215 @@
+---
+import { Image } from "astro:assets";
+import App from "../../images/App.png";
+---
+
+<section class="description">
+  <div class="background-pattern"></div>
+  <div class="background-texture"></div>
+  <div class="container">
+    <div class="content">
+      <h2>A <span class="accent-green">better</span> way to build <span class="accent-green">Fetch XML</span></h2>
+      <p>A next-generation alternative <br> to Fetch XML Builder — lightning-fast, beautifully designed.</p>
+      
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download
+        </a>
+        <a href="#" class="btn-secondary">Free & Open Source</a>
+      </div>
+    </div>
+    
+    <div class="app-screenshot">
+      <Image src={App} alt="PowerExplorer Interface. Fetch XML Builder" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .description {
+    background-color: var(--gray-900);
+    color: var(--white);
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/images/description-texture.svg");
+    background-repeat: repeat;
+    z-index: 1;
+  }
+  .accent-green {
+    color: var(--accent-green);
+  }
+  
+  .background-texture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/images/Background1.jpg");
+    background-size: cover;
+    z-index: 0;
+
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .content {
+    flex: 1.5;
+    max-width: 500px;
+    min-width: 350px;
+    z-index: 2;
+  }
+  
+  h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+  }
+  
+  p {
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--gray-200);
+    margin-bottom: 40px;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent-green);
+    color: var(--gray-900);
+  }
+  
+  .btn-primary:hover {
+    background-color: #add871;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--gray-700);
+    color: var(--white);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--gray-800);
+  }
+  
+  .app-screenshot {
+    position: relative;
+    z-index: 1;
+  }
+
+  .app-screenshot img {
+    min-width:600px;
+  }
+  
+  /* Media queries */
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    .app-screenshot img {
+    margin-top: 0px;
+    min-width:700px;
+  }
+    
+    .content {
+      max-width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 48px;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .content {
+      max-width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 48px;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 40px;
+    }
+    
+    p {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .description {
+      padding: 60px 0;
+    }
+    
+    h2 {
+      font-size: 32px;
+    }
+    
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      gap: 12px;
+    }
+    
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style> 
